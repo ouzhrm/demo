@@ -2,53 +2,29 @@ package com.ouhzrm.算法.回溯算法;
 
 import org.junit.Test;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @description:
  * @author(itcode): zhouyh3
- * @create: 2021-02-08 10:00
+ * @create: 2021-02-08 11:22
  **/
-public class 重复字符串的排列组合 {
-
-    /**
-     * 有重复字符串的排列组合。编写一种方法，计算某字符串的所有排列组合。
-     * <p>
-     * 示例1:
-     * <p>
-     * 输入：S = "qqe"
-     * 输出：["eqq","qeq","qqe"]
-     * 示例2:
-     * <p>
-     * 输入：S = "ab"
-     * 输出：["ab", "ba"]
-     * 提示:
-     * <p>
-     * 字符都是英文字母。
-     * 字符串长度在[1, 9]之间。
-     * <p>
-     * 来源：力扣（LeetCode）
-     * 链接：https://leetcode-cn.com/problems/permutation-ii-lcci
-     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
-     */
+public class 字符串的排列_剑指Offer {
 
     @Test
     public void test() {
-        String[] qqes = permutation("LDirNn");
+        String[] qqes = permutation("aab");
         for (String s : qqes) {
             System.out.println(s);
         }
 
     }
 
-    public String[] permutation(String S) {
+    public String[] permutation(String s ) {
         StringBuilder path = new StringBuilder();
-        char[] chars = S.toCharArray();
+        char[] chars = s.toCharArray();
         Set<String> tmp = new HashSet<>();
-        boolean[] position = new boolean[S.length()];
+        boolean[] position = new boolean[s.length()];
         backTrack(tmp, path, chars, position);
         String[] result= new String[tmp.size()];
         Iterator<String> iterator = tmp.iterator();
@@ -81,5 +57,4 @@ public class 重复字符串的排列组合 {
             }
         }
     }
-
 }

@@ -2,42 +2,39 @@ package com.ouhzrm.算法.回溯算法;
 
 import org.junit.Test;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @description:
  * @author(itcode): zhouyh3
- * @create: 2021-02-08 10:00
+ * @create: 2021-02-08 11:15
  **/
-public class 重复字符串的排列组合 {
+public class 无重复字符串的排列组合 {
 
     /**
-     * 有重复字符串的排列组合。编写一种方法，计算某字符串的所有排列组合。
-     * <p>
-     * 示例1:
-     * <p>
-     * 输入：S = "qqe"
-     * 输出：["eqq","qeq","qqe"]
-     * 示例2:
-     * <p>
-     * 输入：S = "ab"
-     * 输出：["ab", "ba"]
-     * 提示:
-     * <p>
-     * 字符都是英文字母。
-     * 字符串长度在[1, 9]之间。
-     * <p>
-     * 来源：力扣（LeetCode）
-     * 链接：https://leetcode-cn.com/problems/permutation-ii-lcci
-     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+     无重复字符串的排列组合。编写一种方法，计算某字符串的所有排列组合，字符串每个字符均不相同。
+
+     示例1:
+
+     输入：S = "qwe"
+     输出：["qwe", "qew", "wqe", "weq", "ewq", "eqw"]
+     示例2:
+
+     输入：S = "ab"
+     输出：["ab", "ba"]
+     提示:
+
+     字符都是英文字母。
+     字符串长度在[1, 9]之间。
+
+     来源：力扣（LeetCode）
+     链接：https://leetcode-cn.com/problems/permutation-i-lcci
+     著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     @Test
     public void test() {
-        String[] qqes = permutation("LDirNn");
+        String[] qqes = permutation("qwe");
         for (String s : qqes) {
             System.out.println(s);
         }
@@ -47,7 +44,7 @@ public class 重复字符串的排列组合 {
     public String[] permutation(String S) {
         StringBuilder path = new StringBuilder();
         char[] chars = S.toCharArray();
-        Set<String> tmp = new HashSet<>();
+        List<String> tmp = new ArrayList<>();
         boolean[] position = new boolean[S.length()];
         backTrack(tmp, path, chars, position);
         String[] result= new String[tmp.size()];
@@ -61,10 +58,10 @@ public class 重复字符串的排列组合 {
         return result;
     }
 
-    void backTrack(Set<String> tmp, StringBuilder path, char[] chars, boolean[] position) {
+    void backTrack(List<String> result, StringBuilder path, char[] chars, boolean[] position) {
         //终止条件
-        if (path.length() == chars.length && !tmp.contains(path.toString())) {
-            tmp.add(path.toString());
+        if (path.length() == chars.length) {
+            result.add(path.toString());
             return;
         }
 
@@ -74,12 +71,11 @@ public class 重复字符串的排列组合 {
                 path.append(chars[i]);
                 position[i] = true;
                 //递归
-                backTrack(tmp, path, chars, position);
+                backTrack(result, path, chars, position);
                 //撤销选择
                 path.deleteCharAt(path.length() - 1);
                 position[i] = false;
             }
         }
     }
-
 }
