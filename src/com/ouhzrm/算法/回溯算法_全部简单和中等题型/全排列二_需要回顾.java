@@ -54,6 +54,7 @@ public class 全排列二_需要回顾 {
         backTrack(nums, result, path,kengwei);
         return result;
     }
+    
 
     void backTrack(int[] nums,List<List<Integer>> result, List<Integer> path,boolean[] kengwei){
         if(path.size() == nums.length){
