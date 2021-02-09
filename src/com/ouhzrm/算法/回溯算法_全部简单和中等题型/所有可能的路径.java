@@ -1,4 +1,4 @@
-package com.ouhzrm.算法.回溯算法;
+package com.ouhzrm.算法.回溯算法_全部简单和中等题型;
 
 /**
  * @description:

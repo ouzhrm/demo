@@ -1,6 +1,5 @@
-package com.ouhzrm.算法.回溯算法;
+package com.ouhzrm.算法.回溯算法_全部简单和中等题型;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 import org.junit.Test;
 
 import java.util.LinkedList;

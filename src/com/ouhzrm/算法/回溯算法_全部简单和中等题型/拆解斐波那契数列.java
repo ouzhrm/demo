@@ -1,11 +1,9 @@
-package com.ouhzrm.算法.回溯算法;
+package com.ouhzrm.算法.回溯算法_全部简单和中等题型;
 
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static java.lang.Integer.MAX_VALUE;
 
 /**
  * @description:

@@ -1,45 +1,43 @@
-package com.ouhzrm.算法.回溯算法;
+package com.ouhzrm.算法.回溯算法_全部简单和中等题型;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @description:
  * @author(itcode): zhouyh3
- * @create: 2021-02-08 11:46
+ * @create: 2021-02-08 11:27
  **/
-public class 子集 {
-
+public class 幂集_面试题 {
     /**
-     给你一个整数数组 nums ，数组中的元素 互不相同 。返回该数组所有可能的子集（幂集）。
-     解集 不能 包含重复的子集。你可以按 任意顺序 返回解集。
+     幂集。编写一种方法，返回某集合的所有子集。集合中不包含重复的元素。
 
-     示例 1：
+     说明：解集不能包含重复的子集。
 
-     输入：nums = [1,2,3]
-     输出：[[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
-     示例 2：
+     示例:
 
-     输入：nums = [0]
-     输出：[[],[0]]
-      
-
-     提示：
-
-     1 <= nums.length <= 10
-     -10 <= nums[i] <= 10
-     nums 中的所有元素 互不相同
+     输入： nums = [1,2,3]
+     输出：
+     [
+        [3],
+       [1],
+       [2],
+       [1,2,3],
+       [1,3],
+       [2,3],
+       [1,2],
+       []
+     ]
 
      来源：力扣（LeetCode）
-     链接：https://leetcode-cn.com/problems/subsets
+     链接：https://leetcode-cn.com/problems/power-set-lcci
      著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
     @Test
     public void test(){
-        int[] nums = new int[]{1,2,3};
+        int[] nums = new int[]{};
         System.out.println(subsets(nums));
     }
 
