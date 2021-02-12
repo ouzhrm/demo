@@ -45,6 +45,7 @@ public class 累加数 {
     }
 
 
+    //max  必须要用Long
     String max = Long.MAX_VALUE +"";
     boolean result =false;
     public boolean isAdditiveNumber(String num) {
