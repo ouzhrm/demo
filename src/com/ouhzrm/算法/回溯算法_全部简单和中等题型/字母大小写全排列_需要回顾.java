@@ -3,6 +3,7 @@ package com.ouhzrm.算法.回溯算法_全部简单和中等题型;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -10,7 +11,7 @@ import java.util.List;
  * @author(itcode): zhouyh3
  * @create: 2021-02-12 22:00
  **/
-public class 字母大小写全排列 {
+public class 字母大小写全排列_需要回顾 {
     /**
      给定一个字符串S，通过将字符串S中的每个字母转变大小写，我们可以获得一个新的字符串。返回所有可能得到的字符串集合。
 
@@ -39,32 +40,31 @@ public class 字母大小写全排列 {
 
     @Test
     public void test(){
-        System.out.println(letterCasePermutation("a1b2"));
+        System.out.println(letterCasePermutation("1a2b"));
     }
 
     public List<String> letterCasePermutation(String S) {
-        char[] chars = S.toCharArray();
-        StringBuilder path = new StringBuilder();
-        List<String> result = new ArrayList<>();
-        backTrack( chars, path, result);
-        return result;
-    }
+        List<StringBuilder> ans = new ArrayList();
+        ans.add(new StringBuilder());
 
-    void backTrack(char[] chars,StringBuilder path,List<String> result){
-        if(path.length() == chars.length){
-            result.add(path.toString());
-            return;
-        }
-
-        for(int i = 0;i< chars.length;i++){
-            if((chars[i] - 'a') >= 0){
-                path.append(chars[i]);
-                chars[i] = Character.toUpperCase(chars[i]);
-                backTrack(chars,path, result);
-                path.deleteCharAt(path.length()-1);
-            }else{
-                path.append(chars[i]);
+        for (char c: S.toCharArray()) {
+            int n = ans.size();
+            if (Character.isLetter(c)) {
+                for (int i = 0; i < n; ++i) {
+                    //debug发现复制一份item，并添加进去，然后各append大小写
+                    ans.add(new StringBuilder(ans.get(i)));
+                    ans.get(i).append(Character.toLowerCase(c));
+                    ans.get(n+i).append(Character.toUpperCase(c));
+                }
+            } else {
+                for (int i = 0; i < n; ++i)
+                    ans.get(i).append(c);
             }
         }
+
+        List<String> finalans = new ArrayList();
+        for (StringBuilder sb: ans)
+            finalans.add(sb.toString());
+        return finalans;
     }
 }

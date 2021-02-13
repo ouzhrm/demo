@@ -10,7 +10,7 @@ import java.util.List;
  * @author(itcode): zhouyh3
  * @create: 2021-01-31 20:24
  **/
-public class 二维数组全排列 {
+public class 二维数组全排列_需要回顾 {
 
     List<String> res = new LinkedList<>();
 
