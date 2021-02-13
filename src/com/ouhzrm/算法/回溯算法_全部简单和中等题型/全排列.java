@@ -48,10 +48,10 @@ public class 全排列 {
             track.add(nums[i]);
             // 进入下一层决策树
             backtrack(nums, track);
-            System.out.println("进入下一层决策树track = "+track);
+            //System.out.println("进入下一层决策树track = "+track);
             // 取消选择，返回上一层决策树
             track.removeLast();
-            System.out.println("取消选择，返回上一层决策树track = "+track);
+           // System.out.println("取消选择，返回上一层决策树track = "+track);
         }
     }
 }
