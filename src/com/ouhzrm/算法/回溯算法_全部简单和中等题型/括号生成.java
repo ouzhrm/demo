@@ -36,7 +36,7 @@ public class 括号生成 {
 
     @Test
     public void test(){
-        System.out.println(generateParenthesis(1));
+        System.out.println(generateParenthesis(3));
     }
 
     public List<String> generateParenthesis(int n) {
@@ -49,9 +49,8 @@ public class 括号生成 {
 
 
     int zheng = 0;
-    int fan = 0;
     void backTrack(int n,String[] kuohao, StringBuilder path,List<String> result){
-        if(zheng == 0 && path.length() == n*2 && "(".equals(String.valueOf(path.charAt(0))) && ")".equals(String.valueOf(path.charAt(path.length()-1)))){
+        if(zheng == 0 && path.length() == n*2){
             result.add(path.toString());
         }
         if(path.length() >= n*2){
@@ -80,3 +79,4 @@ public class 括号生成 {
 
 
 }
+
