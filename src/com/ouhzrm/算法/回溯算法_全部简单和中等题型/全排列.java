@@ -12,9 +12,14 @@ import java.util.List;
  **/
 public class 全排列 {
 
-    List<List<Integer>> res = new LinkedList<>();
+    @Test
+    public void test(){
+        System.out.println(permute(new int[]{1,2,3}));
+    }
 
+    List<List<Integer>> res = new LinkedList<>();
     /* 主函数，输入一组不重复的数字，返回它们的全排列 */
+
     List<List<Integer>> permute(int[] nums) {
         // 记录「路径」
         // 这里的 选择列表 即包含在nums中
@@ -23,12 +28,6 @@ public class 全排列 {
         return res;
     }
 
-    @Test
-    public void test(){
-        System.out.println(permute(new int[]{1,2,3}));
-    }
-
-    int j = 0;
 
     // 路径：记录在 track 中
     // 选择列表：nums 中的元素
