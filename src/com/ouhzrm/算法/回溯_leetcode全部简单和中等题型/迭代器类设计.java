@@ -8,7 +8,7 @@ import java.util.List;
  * @author(itcode): zhouyh3
  * @create: 2021-02-04 17:25
  **/
-public class CombinationIterator {
+public class 迭代器类设计 {
 
     /**
      请你设计一个迭代器类，包括以下内容：
@@ -41,7 +41,7 @@ public class CombinationIterator {
     public int combinationLength = 2;
     public int index;
 
-    public CombinationIterator(String characters, int combinationLength) {
+    public 迭代器类设计(String characters, int combinationLength) {
         this.combinationLength = combinationLength;
         characterss = new ArrayList<>();
         index = 0;
@@ -87,7 +87,7 @@ public class CombinationIterator {
     }
 
     public static void main(String[] args) {
-        CombinationIterator iterator = new CombinationIterator("abc", 2); // 创建迭代器 iterator
+        迭代器类设计 iterator = new 迭代器类设计("abc", 2); // 创建迭代器 iterator
 
         System.out.println(iterator.next()); // 返回 "ab"
         System.out.println(iterator.hasNext());  // 返回 true
