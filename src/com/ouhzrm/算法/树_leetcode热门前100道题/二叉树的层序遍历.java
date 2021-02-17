@@ -88,7 +88,9 @@ public class 二叉树的层序遍历 {
                     }
                 }
             }
-            result.add(item);
+            if(item.size() > 0){
+                result.add(item);
+            }
 
         }
 
