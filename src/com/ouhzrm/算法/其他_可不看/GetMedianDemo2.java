@@ -1,4 +1,4 @@
-package com.ouhzrm.算法.其他;
+package com.ouhzrm.算法.其他_可不看;
 
 import org.junit.Test;
 
