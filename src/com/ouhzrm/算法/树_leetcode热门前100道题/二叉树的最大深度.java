@@ -37,4 +37,13 @@ public class 二叉树的最大深度 {
         int right = maxDepth(root.right);
         return 1+(left > right? left:right);
     }
+
+
+
+//    public int maxDepth1(TreeNode root) {
+//        if(root == null) return 0;
+//        int left = maxDepth1(root.left);
+//        int right = maxDepth1(root.right);
+//        return 1+ Math.max(left,right);
+//    }
 }
