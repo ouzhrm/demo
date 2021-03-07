@@ -11,4 +11,20 @@ public class TreeNode {
         this.left = left;
         this.right = right;
     }
+
+    static void prePrintTree(TreeNode root){
+        if(root != null){
+            System.out.println(root.val);
+            prePrintTree(root.left);
+            prePrintTree(root.right);
+        }
+    }
+
+    static void middlePrintTree(TreeNode root){
+        if(root != null){
+            prePrintTree(root.left);
+            System.out.println(root.val);
+            prePrintTree(root.right);
+        }
+    }
 }
