@@ -62,6 +62,14 @@ public class TreeNode {
     }
 
     //左子树位置是2 * index,右子树位置是2 * index + 1
+
+    /**
+     *
+     * @param array 无
+     * @param index 默认值为1
+     * @return
+     */
+    final static int DEFAULT = 1;
     static TreeNode getTreeByRecur(Integer[] array,int index){
         if(index > array.length){
             return null;
