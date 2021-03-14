@@ -14,6 +14,7 @@ public class 有效的字母异位词 {
         System.out.println(isAnagram("a","ab"));
     }
 
+    //把数组当哈希表用
     public boolean isAnagram(String s, String t) {
         if(s.length() != t.length()) return false;
         char[] schars = s.toCharArray();
