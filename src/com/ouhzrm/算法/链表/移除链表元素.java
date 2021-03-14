@@ -3,6 +3,8 @@ package com.ouhzrm.算法.链表;
 import com.ouhzrm.算法.链表.oneway.ListNode;
 import org.junit.Test;
 
+import javax.swing.*;
+
 /**
  * @description:
  * @author(itcode): zhouyh3
@@ -18,6 +20,7 @@ public class 移除链表元素 {
         ListNode.print(listNode1);
     }
 
+    //递归
     public ListNode removeElements(ListNode head, int val) {
         if(head == null) return null;
         head.next = removeElements(head.next,val);
@@ -27,6 +30,29 @@ public class 移除链表元素 {
         }else{
             return head;
         }
+    }
+
+    @Test
+    public void tes2t(){
+        int[] array = new int[]{1,2,6,3,4,5,6};
+        ListNode listNode = ListNode.get(array);
+        ListNode listNode1 = removeElements2(listNode, 6);
+        ListNode.print(listNode1);
+    }
+
+    //虚拟头节点
+    public ListNode removeElements2(ListNode head, int val) {
+        ListNode tmp = new ListNode(val-1);
+        tmp.next = head;
+        ListNode prev = tmp;
+        while(prev.next !=null){
+            if(prev.next.val == val){
+                prev.next = prev.next.next;
+            }else{
+                prev = prev.next;
+            }
+        }
+        return tmp.next;
     }
 
 }
