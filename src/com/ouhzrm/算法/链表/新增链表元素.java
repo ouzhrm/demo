@@ -33,6 +33,7 @@ public class 新增链表元素 {
         ListNode.print(result);
     }
 
+    //解题思路：递归
     public ListNode addElement(ListNode head, int addVal, int target) {
         if(head == null) return null;
         head.next = addElement(head.next,addVal,target);
