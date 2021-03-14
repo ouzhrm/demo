@@ -1,22 +1,22 @@
-package com.ouhzrm.算法.链表;
+package com.ouhzrm.算法.链表.oneway;
 
 /**
- * @description:
+ * @description: 单向链表model
  * @author(itcode): zhouyh3
- * @create: 2021-03-13 18:35
+ * @create: 2021-03-13 22:12
  **/
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
     ListNode() {
     }
 
-    ListNode(int val) {
+    public ListNode(int val) {
         this.val = val;
     }
 
-    ListNode(int val, ListNode next) {
+    public ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;
     }
@@ -38,5 +38,3 @@ public class ListNode {
         print(node.next);
     }
 }
-
-

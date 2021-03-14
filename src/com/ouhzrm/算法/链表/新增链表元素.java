@@ -1,5 +1,6 @@
 package com.ouhzrm.算法.链表;
 
+import com.ouhzrm.算法.链表.oneway.ListNode;
 import org.junit.Test;
 
 /**
@@ -12,6 +13,19 @@ public class 新增链表元素 {
     //在4前面加个元素3
 
     @Test
+    public void test2(){
+        int[] array = new int[]{1,2,4,5,6};
+        ListNode listNode = ListNode.get(array);
+        ListNode tmp = listNode;
+        while(tmp != null){
+            tmp = tmp.next;
+        }
+        ListNode.print(tmp);
+        System.out.println();
+        ListNode.print(listNode);
+    }
+
+    @Test
     public void test(){
         int[] array = new int[]{1,2,4,5,6};
         ListNode listNode = ListNode.get(array);
@@ -19,7 +33,7 @@ public class 新增链表元素 {
         ListNode.print(result);
     }
 
-    public ListNode addElement(ListNode head, int addVal,int target) {
+    public ListNode addElement(ListNode head, int addVal, int target) {
         if(head == null) return null;
         head.next = addElement(head.next,addVal,target);
         System.out.println(head.val);
