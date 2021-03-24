@@ -8,5 +8,5 @@ package com.ouhzrm.数据结构.字符串;
 public class 翻转字符串里的单词 {
 
     //不需要使用额外的空间思路：https://mmbiz.qpic.cn/mmbiz_gif/ciaqDnJprwv54NYOrYaIR3KmpEVyf9qxFad13MQwhPmCbUBoHD8oXpMkpgpE1raNsC9ibrGCl9OO4rT9RQr7mTvg/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1
-    //或者用栈，需要额外的空间
+    //或者用栈，但需要额外的空间
 }
