@@ -4,18 +4,18 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode() {}
-    TreeNode(int val) { this.val = val; }
-    TreeNode(int val, TreeNode left, TreeNode right) {
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
+    public TreeNode() {}
+    public TreeNode(int val) { this.val = val; }
+    public TreeNode(int val, TreeNode left, TreeNode right) {
         this.val = val;
         this.left = left;
         this.right = right;
     }
 
-    static void prePrintTree(TreeNode root){
+    public static void prePrintTree(TreeNode root){
         if(root != null){
             System.out.println(root.val);
             prePrintTree(root.left);
@@ -23,7 +23,7 @@ public class TreeNode {
         }
     }
 
-    static void middlePrintTree(TreeNode root){
+    public static void middlePrintTree(TreeNode root){
         if(root != null){
             prePrintTree(root.left);
             System.out.println(root.val);
@@ -31,7 +31,7 @@ public class TreeNode {
         }
     }
 
-    static TreeNode getTreeByQueue(Integer[] array){
+    public static TreeNode getTreeByQueue(Integer[] array){
         if(array.length == 0){
             return null;
         }
@@ -68,7 +68,7 @@ public class TreeNode {
      * @return
      */
     final static int DEFAULT = 1;
-    static TreeNode getTreeByRecur(Integer[] array,int index){
+    public static TreeNode getTreeByRecur(Integer[] array,int index){
         if(index > array.length){
             return null;
         }
