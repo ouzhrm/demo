@@ -1,4 +1,4 @@
-import com.ouhzrm.高频.LRUCache;
+import com.ouhzrm.高频.数据结构设计.LRUCache;
 
 /**
  * @description:
