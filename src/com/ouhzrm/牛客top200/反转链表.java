@@ -1,10 +1,10 @@
-package com.ouhzrm.数据结构.链表;
+package com.ouhzrm.牛客top200;
 
 import com.ouhzrm.数据结构.链表.oneway.ListNode;
 import org.junit.Test;
 
 /**
- * @description:
+ * @description: https://www.nowcoder.com/practice/75e878df47f24fdc9dc3e400ec6058ca?tpId=190&tags=&title=&diffculty=0&judgeStatus=0&rp=1&tab=answerKey
  * @author(itcode): zhouyh3
  * @create: 2021-03-14 13:57
  **/
@@ -14,7 +14,7 @@ public class 反转链表 {
     public void test(){
         int[] array = new int[]{1,2,3,4,5,6};
         ListNode listNode = ListNode.get(array);
-        ListNode.print(ReverseList2(listNode));
+        ListNode.print(reverseList(listNode));
         //ListNode.print(reverseList2(listNode));
     }
 
@@ -32,7 +32,7 @@ public class 反转链表 {
         return pre;
     }
 
-    //递归解法
+    //递归解法2
     public ListNode reverseList2(ListNode head) {
         return reverse(null,head);
     }
@@ -47,11 +47,16 @@ public class 反转链表 {
         return reverse(cur,temp);
     }
 
-    public ListNode ReverseList2(ListNode head) {
+    //递归解法3
+    public ListNode reverseList3(ListNode head) {
+        //有个坑，head==null需要加上
         if(head == null || head.next == null) return head;
-        ListNode last = ReverseList2(head.next);
+        //first=5
+        ListNode first = reverseList(head.next);
+        //head=4, head.next=5, head.next.next=head即5->4
         head.next.next = head;
+        //删除4->5的引用
         head.next = null;
-        return last;
+        return first;
     }
 }

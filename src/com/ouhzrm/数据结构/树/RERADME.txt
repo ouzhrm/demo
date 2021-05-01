@@ -39,8 +39,8 @@ BST 的特性大家应该都很熟悉了：
 
 刷题：
 https://leetcode-cn.com/problemset/all/?topicSlugs=tree&listId=2cktkvj
+https://www.nowcoder.com/activity/oj?tab=0
 刷题经验： 如果5分钟内没有思路，立马看答案，如果30分钟没有写出来或者没有通过，尽快找你这种思路类似的答案
-
 
 
 

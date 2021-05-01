@@ -47,18 +47,18 @@ public class 二叉树的层序遍历 {
         TreeNode left = new TreeNode();
         left.val = 2;
         TreeNode left1 = new TreeNode();
-        left1.val = 3;
+        left1.val = 4;
         TreeNode left2 = new TreeNode();
-        left2.val = 4;
+        left2.val = 5;
         left.left = left1;
         left.right = left2;
 
         TreeNode right = new TreeNode();
-        right.val = 2;
+        right.val = 3;
         TreeNode right1 = new TreeNode();
-        right1.val = 4;
+        right1.val = 6;
         TreeNode right2 = new TreeNode();
-        right2.val = 3;
+        right2.val = 7;
         right.left = right1;
         right.right = right2;
 

@@ -54,7 +54,7 @@ import java.util.Map;
  **/
 public class LRUCache {
 
-    //关键设计：双端链表+哈希表（value=链表元素值）
+    //关键设计：双端链表+哈希表（value=链表对象）
     class DListNode{
         int key;
         int val;

@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @description: https://leetcode-cn.com/problems/binary-tree-inorder-traversal/
@@ -25,6 +26,8 @@ public class 二叉树的中序遍历_迭代解法 {
     public  void test(){
         TreeNode root = TreeNode.getTreeByQueue(new Integer[]{1,2,3,4,5,6,7});
         System.out.println(inorderTraversal(root));
+        ReentrantLock lock = new ReentrantLock();
+        lock.lock();
     }
 
 
