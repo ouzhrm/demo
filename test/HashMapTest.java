@@ -47,9 +47,12 @@ public class HashMapTest {
 
         Hashtable<Integer,String> map2 = new Hashtable();
         map2.put(1,"123");
-
+        "123".equals(123);
+        Integer a22 = 123;
+        a22.equals(123);
 
         ConcurrentHashMap<Integer,String> cmap = new ConcurrentHashMap<>();
+        cmap.size();
         cmap.put(1,"123");
         cmap.get(1);
 
@@ -78,7 +81,13 @@ public class HashMapTest {
 
         CopyOnWriteArrayList arrayList = new CopyOnWriteArrayList();
         arrayList.add(1);
-        //AbstractQueuedSynchronizer
+        //AbstractQueuedSynchronizer“
+        
+        Lock k  = new ReentrantLock();
+        //ExecutorService executorService1 = Executors.newSingleThreadExecutor();
+
+
+
 
 
     }
